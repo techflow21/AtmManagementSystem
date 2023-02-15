@@ -8,11 +8,13 @@ To run the ATM Management System, you need to have the following:
 A SQL Server database to store the system data (you can use SQL Server Express or a cloud-based service like Azure SQL)
 To install and run the system, you can follow these steps:
 1. Clone the repository to your local machine:
+
 ```
 git clone https://github.com/techflow21/AtmManagementSystem.git
 ```
 2. Open the solution file (AtmManagementSystem.sln) in Visual Studio or another C# IDE.
 3. Modify the connection string in the App.config file to match your SQL Server instance and database:
+
 ```
 <connectionStrings>
   <add name="DefaultConnection" connectionString="Server=<server>;Database=<database>;User Id=<username>;Password=<password>;" providerName="Microsoft.Data.SqlClient" />
@@ -26,7 +28,7 @@ When you run the ATM Management System, you will be presented with a login scree
 ## Admin functions
 If you log in as an admin (using the default usernames and passwords), you will have access to the following functions:
 -- Load ATM with cash: allows you to add cash to the ATM machine.
--- Create new customer: allows you to add a new customer to the system.
+-- Register new customer: allows you to add a new customer to the system.
 -- Edit customer: allows you to modify an existing customer's details.
 -- Delete customer details: allows you to delete a customer from the system.
 -- View all customers: displays a list of all registered customers and their details.
