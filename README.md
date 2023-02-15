@@ -9,16 +9,16 @@ A SQL Server database to store the system data (you can use SQL Server Express o
 To install and run the system, you can follow these steps:
 1. Clone the repository to your local machine:
 ```
-git clone https://github.com/<username>/atm-management-system.git
+git clone https://github.com/techflow21/atm-management-system.git
 ```
-2. Open the solution file (ATMManagementSystem.sln) in Visual Studio or another C# IDE.
+2. Open the solution file (AtmManagementSystem.sln) in Visual Studio or another C# IDE.
 3. Modify the connection string in the App.config file to match your SQL Server instance and database:
 ```
 <connectionStrings>
   <add name="DefaultConnection" connectionString="Server=<server>;Database=<database>;User Id=<username>;Password=<password>;" providerName="Microsoft.Data.SqlClient" />
 </connectionStrings>
 ```
-Run the ATMManagementSystem project, which will create the necessary database tables (if they don't exist) and populate the admin users.
+Run the AtmManagementSystem project, which will create the necessary database tables (if they don't exist) and populate the admin users.
 
 ## Usage
 When you run the ATM Management System, you will be presented with a login screen where you can choose to log in as an admin or a customer, or exit the program.
@@ -33,7 +33,7 @@ If you log in as an admin (using the default usernames and passwords), you will 
 -- View all transactions: displays a list of all transactions performed by customers.
 
 ## Customer functions
-If you log in as a customer (using your account number and ATM PIN), you will have access to the following functions:
+If you log in as a customer (using your Account number and ATM Pin), you will have access to the following functions:
 -- Deposit: allows you to add cash to your account.
 -- Withdraw: allows you to withdraw cash from your account.
 -- Transfer: allows you to transfer cash to another customer's account.
