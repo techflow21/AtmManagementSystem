@@ -9,7 +9,7 @@ A SQL Server database to store the system data (you can use SQL Server Express o
 To install and run the system, you can follow these steps:
 1. Clone the repository to your local machine:
 ```
-git clone https://github.com/techflow21/atm-management-system.git
+git clone https://github.com/techflow21/AtmManagementSystem.git
 ```
 2. Open the solution file (AtmManagementSystem.sln) in Visual Studio or another C# IDE.
 3. Modify the connection string in the App.config file to match your SQL Server instance and database:
