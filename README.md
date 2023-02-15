@@ -18,4 +18,29 @@ git clone https://github.com/<username>/atm-management-system.git
   <add name="DefaultConnection" connectionString="Server=<server>;Database=<database>;User Id=<username>;Password=<password>;" providerName="Microsoft.Data.SqlClient" />
 </connectionStrings>
 ```
+Run the ATMManagementSystem project, which will create the necessary database tables (if they don't exist) and populate the admin users.
 
+## Usage
+When you run the ATM Management System, you will be presented with a login screen where you can choose to log in as an admin or a customer, or exit the program.
+
+## Admin functions
+If you log in as an admin (using the default usernames and passwords), you will have access to the following functions:
+-- Load ATM with cash: allows you to add cash to the ATM machine.
+-- Create new customer: allows you to add a new customer to the system.
+-- Edit customer: allows you to modify an existing customer's details.
+-- Delete customer: allows you to delete a customer from the system.
+-- View all customers: displays a list of all registered customers and their details.
+-- View all transactions: displays a list of all transactions performed by customers.
+
+## Customer functions
+If you log in as a customer (using your account number and ATM PIN), you will have access to the following functions:
+-- Deposit: allows you to add cash to your account.
+-- Withdraw: allows you to withdraw cash from your account.
+-- Transfer: allows you to transfer cash to another customer's account.
+-- Check balance: displays your current account balance.
+
+## Contributing
+If you want to contribute to the ATM Management System, you can do so by forking the repository, making your changes, and submitting a pull request. Please make sure to follow the existing code style and conventions, and include tests for your changes.
+
+## License
+The ATM Management System is licensed under the MIT License. Feel free to use it for your own projects or modify it as needed.
