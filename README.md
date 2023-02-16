@@ -15,11 +15,7 @@ git clone https://github.com/techflow21/AtmManagementSystem.git
 2. Open the solution file (AtmManagementSystem.sln) in Visual Studio or another C# IDE.
 3. Modify the connection string in the App.config file to match your SQL Server instance and database:
 
-```
-<connectionStrings>
-  <add name="DefaultConnection" connectionString="Server=<server>;Database=<database>;User Id=<username>;Password=<password>;" providerName="Microsoft.Data.SqlClient" />
-</connectionStrings>
-```
+
 Run the AtmManagementSystem project, which will create the necessary database tables (if they don't exist) and populate the admin users.
 
 ## Usage
