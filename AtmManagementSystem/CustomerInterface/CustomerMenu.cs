@@ -9,93 +9,108 @@ public class CustomerMenu
         string connectionString = "Data Source=.;Initial Catalog=AtmSystemDB; Encrypt = False; Integrated Security=True";
 
         CustomerOperation customerOperation = new(connectionString);
+        
+        bool running = false;
 
-
-        Console.WriteLine("\n\t 1. View account details \n\t 2. Change Atm Pin \n\t 3. Check account balance \n\t 4. Transfer cash \n\t 5. Withdraw cash \n\t 6. View statement of account \n\t 7. Logout \n\t ");
-
-        Console.Write("\n\t Enter your choice: \n\t ");
-        var customerChoice = Console.ReadLine();
-
-        switch (customerChoice)
+        while (!running)
         {
-            case "1":
-                Console.Clear();
+            Console.WriteLine("\n\t 1. View account details \n\t 2. Change Atm Pin \n\t 3. Check account balance \n\t 4. Transfer cash \n\t 5. Withdraw cash \n\t 6. View statement of account \n\t 7. Logout \n\t ");
 
-                Console.Write("\n\t Enter your account number to view details: \n\t ");
-                var accountNumber = Console.ReadLine();
+            Console.Write("\n\t Enter your choice: \n\t ");
+            var customerChoice = Console.ReadLine();
 
-                customerOperation.ViewAccountDetails(accountNumber);
-                break;
+            switch (customerChoice)
+            {
+                case "1":
+                    Console.Clear();
 
-            case "2":
-                Console.Clear();
+                    Console.Write("\n\t Enter your account number to view details: \n\t ");
+                    var accountNumber = Console.ReadLine();
 
-                Console.Write("\n\t Enter your account number: \n\t ");
-                accountNumber = Console.ReadLine();
+                    customerOperation.ViewAccountDetails(accountNumber);
+                    break;
 
-                Console.Write("\n\t Enter new Atm Pin (any 4 digits): \n\t ");
-                var newAtmPin = Console.ReadLine();
+                case "2":
+                    Console.Clear();
 
-                customerOperation.ChangeAtmPin(accountNumber, newAtmPin);
-                break;
+                    Console.Write("\n\t Enter your account number: \n\t ");
+                    accountNumber = Console.ReadLine();
 
-            case "3":
-                Console.Clear();
-                Console.Write("\n\t Enter your account number to view account balance: \n\t ");
-                accountNumber = Console.ReadLine();
+                    Console.Write("\n\t Enter new Atm Pin (any 4 digits): \n\t ");
+                    var newAtmPin = Console.ReadLine();
 
-                Utility.ProcessDelay();
-                decimal accountBalance = customerOperation.CheckBalance(accountNumber);
+                    customerOperation.ChangeAtmPin(accountNumber, newAtmPin);
+                    break;
 
-                Console.WriteLine($"\n\t Your account balance is: ${accountBalance}\n");
-                break;
+                case "3":
+                    Console.Clear();
+                    Console.Write("\n\t Enter your account number to view account balance: \n\t ");
+                    accountNumber = Console.ReadLine();
 
-            case "4":
-                Console.Clear();
+                    Utility.ProcessDelay();
+                    decimal accountBalance = customerOperation.CheckBalance(accountNumber);
 
-                Console.Write("\n\t Enter your account number: \n\t ");
-                accountNumber = Console.ReadLine();
+                    Console.WriteLine($"\n\t Your account balance is: ${accountBalance}\n");
+                    break;
 
-                Console.Write("\n\t Enter the recipient's account number: \n\t ");
-                var recipientAccountNumber = Console.ReadLine();
+                case "4":
+                    Console.Clear();
 
-                Console.Write("\n\t Enter amount to transfer (Min:$10 & Max:$10000): \n\t ");
-                var amount = Console.ReadLine();
+                    Console.Write("\n\t Enter your account number: \n\t ");
+                    accountNumber = Console.ReadLine();
 
-                Utility.ProcessDelay();
-                customerOperation.Transfer(accountNumber, recipientAccountNumber, decimal.Parse(amount));
-                Utility.MenuDelay();
-                break;
+                    Console.Write("\n\t Enter the recipient's account number: \n\t ");
+                    var recipientAccountNumber = Console.ReadLine();
 
-            case "5":
-                Console.Clear();
+                    Console.Write("\n\t Enter amount to transfer (Min:$10 & Max:$10000): \n\t ");
+                    var amount = Console.ReadLine();
 
-                Console.Write("\n\t Enter your account number: \n\t ");
-                accountNumber = Console.ReadLine();
+                    Utility.ProcessDelay();
+                    customerOperation.Transfer(accountNumber, recipientAccountNumber, decimal.Parse(amount));
+                    Utility.MenuDelay();
+                    break;
 
-                Console.Write("\n\t Enter amount to withdraw (Min:$10 & Max:$10000): \n\t ");
-                amount = Console.ReadLine();
+                case "5":
+                    Console.Clear();
 
-                Utility.ProcessDelay();
-                customerOperation.WithdrawCash(accountNumber, decimal.Parse(amount));
-                Utility.MenuDelay();
-                break;
+                    Console.Write("\n\t Enter your account number: \n\t ");
+                    accountNumber = Console.ReadLine();
 
-            case "6":
-                Console.Clear();
+                    Console.Write("\n\t Enter amount to withdraw (Min:$10 & Max:$10000): \n\t ");
+                    amount = Console.ReadLine();
 
-                Console.Write("\n\t Enter your account number: \n\t ");
-                accountNumber = Console.ReadLine();
+                    Utility.ProcessDelay();
+                    customerOperation.WithdrawCash(accountNumber, decimal.Parse(amount));
+                    Utility.MenuDelay();
+                    break;
 
-                Utility.ProcessDelay();
-                customerOperation.PrintAccountStatement(accountNumber);
-                break;
+                case "6":
+                    Console.Clear();
 
-            case "7":
-                Console.Clear();
-                customerRunning = false;
-                break;
+                    Console.Write("\n\t Enter your account number: \n\t ");
+                    accountNumber = Console.ReadLine();
+
+                    Utility.ProcessDelay();
+                    customerOperation.PrintAccountStatement(accountNumber);
+                    break;
+
+                case "7":
+                    Console.Clear();
+                    customerRunning = false;
+                    break;
+            }
+
         }
 
+        Console.Write("\n\t Do you want to carry out another Operation?\n\t ");
+        var response = Console.ReadLine().ToLower();
+
+        Console.Clear();
+
+        if (response == "y")
+        {
+            running = false;
+            MenuOption(customerRunning);
+        }
     }
 }

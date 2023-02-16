@@ -13,7 +13,7 @@ public class GeneralMenu
         {
             Console.Clear();
 
-            Console.WriteLine("\n\t Welcome to ATM Management System \n\t ====================================\n\t 1. Admin Login \n\t 2. Customer Login \n\t 3. Exit");
+            Console.WriteLine("\n\t Welcome to ATM Management System \n\t =================================\n\t 1. Admin Login \n\t 2. Customer Login \n\t 3. Exit");
 
             Console.Write("\n\t Enter your choice: \n\t ");
             string choice = Console.ReadLine();

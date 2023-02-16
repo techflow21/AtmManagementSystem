@@ -22,7 +22,7 @@ internal class Utility
         }
     }
 
-    public static void TryAgain()
+    public static void TryAgainOp()
     {
         Console.Write("\n\t Do you want to carry out another transaction? (y/n): \n\t ");
         var option = Console.ReadLine();
@@ -33,7 +33,7 @@ internal class Utility
         }
     }
 
-    public bool TryAgainOp()
+    public static bool TryAgain()
     {
         while (true)
         {
