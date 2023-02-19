@@ -15,7 +15,6 @@ git clone https://github.com/techflow21/AtmManagementSystem.git
 2. Open the solution file (AtmManagementSystem.sln) in Visual Studio or another C# IDE.
 3. Modify or replace the connection string in the AppStarter file to yours after creating your database.
 
-
 Run the AtmManagementSystem project, which will create the necessary database tables (if they don't exist) and populate the admin users.
 
 ## Usage
