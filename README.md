@@ -12,7 +12,7 @@ To install and run the system, you can follow these steps:
 ```
 git clone https://github.com/techflow21/AtmManagementSystem.git
 ```
-2. Open the solution file (AtmManagementSystem.sln) in Visual Studio or any other code Editor such as Visual S Code.
+2. Open the solution file (AtmManagementSystem.sln) in Visual Studio or any other code Editor such as Visual Studio Code.
 3. Modify or replace the connection string in the AppStarter file to yours after creating your database.
 
 Run the AtmManagementSystem project, which will create the necessary database tables (if they don't exist) and populate the admin users.
