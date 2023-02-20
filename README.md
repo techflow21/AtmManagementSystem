@@ -26,7 +26,7 @@ If you log in as an admin (using the default usernames and passwords), you will 
 - Register new customer: allows you to add a new customer to the system.
 - Edit customer: allows you to modify an existing customer's details.
 - Delete customer details: allows you to delete a customer from the system.
-- Search for a single customer details by entering 
+- Search for a single customer details by entering the customer account 
 - View all customers: displays a list of all registered customers and their details.
 - View all transactions: displays a list of all transactions performed by customers.
 
