@@ -2,7 +2,7 @@
 
 namespace AtmManagementSystem.AdminInterface;
 
-internal class AdminLoginInterface
+internal class AdminLogin_UI
 {
     public static void AdminLogin()
     {

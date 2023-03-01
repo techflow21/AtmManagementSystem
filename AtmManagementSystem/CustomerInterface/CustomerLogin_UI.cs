@@ -2,7 +2,7 @@
 
 namespace AtmManagementSystem.CustomerInterface;
 
-internal class CustomerLoginInterface
+internal class CustomerLogin_UI
 {
     public static void CustomerLogin()
     {

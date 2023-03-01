@@ -22,12 +22,12 @@ public class GeneralMenu
             {
                 case "1":
                     Console.Clear();
-                    AdminLoginInterface.AdminLogin();
+                    AdminLogin_UI.AdminLogin();
                     break;
 
                 case "2":
                     Console.Clear();
-                    CustomerLoginInterface.CustomerLogin();
+                    CustomerLogin_UI.CustomerLogin();
                     break;
 
                 case "3":
