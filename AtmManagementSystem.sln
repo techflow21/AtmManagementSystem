@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtmManagementSystem", "AtmManagementSystem\AtmManagementSystem.csproj", "{C97C4DF0-F69A-427E-BBF3-69E5078CC769}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atm_UI", "AtmManagementSystem\Atm_UI.csproj", "{C97C4DF0-F69A-427E-BBF3-69E5078CC769}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atm_Domain", "Atm_Domain\Atm_Domain.csproj", "{CDDB165B-99D3-4951-9796-4B5186F6E207}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atm_Domain", "Atm_Domain\Atm_Domain.csproj", "{CDDB165B-99D3-4951-9796-4B5186F6E207}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atm_Data", "Atm_Data\Atm_Data.csproj", "{B08BF0C5-0A0B-4389-ACB0-2CAD99F8A43B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atm_Data", "Atm_Data\Atm_Data.csproj", "{B08BF0C5-0A0B-4389-ACB0-2CAD99F8A43B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
