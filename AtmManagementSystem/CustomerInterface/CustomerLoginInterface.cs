@@ -6,8 +6,7 @@ internal class CustomerLoginInterface
 {
     public static void CustomerLogin()
     {
-        string connectionString = "Data Source=.;Initial Catalog=AtmSystemDB; Encrypt = False; Integrated Security=True";
-        CustomerLogic customerService = new(connectionString);
+        CustomerLogic customerService = new(AtmProcessor.connectionString);
 
         Console.Write("\n\t Enter your account number: \n\t ");
         var acctNumber = Console.ReadLine();

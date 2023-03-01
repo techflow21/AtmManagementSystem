@@ -49,6 +49,7 @@ internal class Utility
                 return false;
             }
             Console.WriteLine("\n\t Invalid input. Please enter 'y' or 'n'");
+            TryAgain();
         }
     }
 }

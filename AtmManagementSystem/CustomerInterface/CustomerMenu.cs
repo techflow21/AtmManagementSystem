@@ -6,9 +6,7 @@ public class CustomerMenu
 {
     public static void MenuOption(bool customerRunning)
     {
-        string connectionString = "Data Source=.;Initial Catalog=AtmSystemDB; Encrypt = False; Integrated Security=True";
-
-        CustomerOperation customerOperation = new(connectionString);
+        CustomerOperation customerOperation = new(AtmProcessor.connectionString);
         
         bool running = false;
 

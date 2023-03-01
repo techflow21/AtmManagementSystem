@@ -7,7 +7,7 @@ public class AdminMenu
 {
     public static void MenuOption(bool adminRunning)
     {
-        string connectionString = "Data Source=.;Initial Catalog=AtmSystemDB; Encrypt = False; Integrated Security=True";
+        string connectionString = AtmProcessor.connectionString;
 
         AtmLogic atmLogic = new(connectionString);
         AdminOperation adminOperation = new(connectionString);

@@ -6,9 +6,7 @@ internal class AdminLoginInterface
 {
     public static void AdminLogin()
     {
-        string connectionString = "Data Source=.;Initial Catalog=AtmSystemDB; Encrypt = False; Integrated Security=True";
-
-        AdminLogic adminService = new(connectionString);
+        AdminLogic adminService = new(AtmProcessor.connectionString);
 
         Console.Write("\n\t Enter username: \n\t ");
         var username = Console.ReadLine();
